@@ -1,0 +1,7 @@
+# Logged in users
+echo -e "\033[1;34mLogged in users"; tput sgr0
+w
+
+# Last 10 loggins
+echo -e "\033[1;34mLast loggins"; tput sgr0
+last | head

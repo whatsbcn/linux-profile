@@ -1,0 +1,7 @@
+#Command line edit mode: vi
+#shopt -s -o vi
+#bind -m vi > /dev/null
+
+bind "\C-l:clear-screen" > /dev/null
+bind "\C-L:clear-screen" > /dev/null
+bind -q clear-screen > /dev/null

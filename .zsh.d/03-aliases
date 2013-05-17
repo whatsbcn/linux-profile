@@ -1,0 +1,13 @@
+#
+# ALIASES
+
+# Sufix aliases
+alias -s txt=vim
+alias -s html=w3m
+
+# Global aliases
+alias -g NULL="> /dev/null"
+alias -g L="| less"
+alias -g T="| tail"
+alias -g S="| sort"
+

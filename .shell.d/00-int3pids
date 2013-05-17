@@ -1,0 +1,4 @@
+# Defcon imports
+cd ~/code/int3pids/framework/
+. ~/code/int3pids/framework/source2.sh
+cd - &> /dev/null

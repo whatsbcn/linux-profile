@@ -1,0 +1,3 @@
+# shopt magic 
+shopt -s checkwinsize # Per evitar Broken Line wrapping in bash
+shopt -s histappend # Per evitar follar-se el history amb multiples finestres obertes l'escrivim a cada comanda

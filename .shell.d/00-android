@@ -1,0 +1,5 @@
+export LIBXCB_ALLOW_SLOPPY_LOCK="1"
+
+# Android development
+export PATH="/opt/android-sdk-update-manager/tools/:/opt/android-sdk-update-manager/platform-tools/:/opt/android-ndk:$PATH"
+

@@ -1,0 +1,48 @@
+# BINDINGS - ZLE
+
+# Use emacs mode
+bindkey -v
+
+# Standard
+bindkey "$terminfo[kdch1]"  delete-char                         # Delete
+bindkey "\e[3~"             delete-char                         # Delete
+bindkey "$terminfo[khome]"  beginning-of-line                   # Home
+bindkey "\e[1~"             beginning-of-line                   # Home
+bindkey "^[[7~"             beginning-of-line                   # Home (xterm)
+bindkey "\eOH"              beginning-of-line                   # Home (debian xterm)
+bindkey "\e[7~"             beginning-of-line                   # Home (rxvt)
+bindkey "\e[H"              beginning-of-line                   # Home (BSD)
+bindkey "$terminfo[kend]"   end-of-line                         # End
+bindkey "\e[4~"             end-of-line                         # End
+bindkey "^[[8~"             end-of-line                         # End (xterm)
+bindkey "\eOF"              end-of-line                         # End (debian xterm)
+bindkey "\e[8~"             end-of-line                         # End (rxvt)
+bindkey "\e[F"              end-of-line                         # End (BSD)
+bindkey "$terminfo[kcuu1]"  history-beginning-search-backward   # Page Up
+#bindkey "$terminfo[cuu1]"  history-beginning-search-backward   # Page Up
+bindkey "^[[5~"             history-beginning-search-backward   # Page Up
+bindkey "\e[5~"             history-beginning-search-backward   # Page Up
+bindkey "$terminfo[kcud1]"  history-beginning-search-forward    # Page Down
+#bindkey "$terminfo[cud1]"  history-beginning-search-forward    # Page Down
+bindkey "\e[6~"             history-beginning-search-forward    # Page Down
+bindkey "$terminfo[kich1]"  overwrite-mode                      # Insert
+bindkey "^[[2~"             overwrite-mode                      # Insert
+bindkey "\e[2~"             overwrite-mode                      # Insert
+bindkey "^[[A"              up-history                          # UP arrow for back-history
+bindkey "^[[B"              down-history                        # DOWN arrow for fwd-history
+#bindkey "^[[A"             up-line-or-search                   # UP arrow for back-history-search
+#bindkey "^[[B"             down-line-or-search                 # DOWN arrow for fwd-history-search
+bindkey "^r"                history-incremental-search-backward # CTRL-R - history search
+bindkey " "                 magic-space                         # ' ' (Space)
+
+# (u)rxvt compatibily
+bindkey "\e[\304"           backward-word                       # rxvt M-left
+bindkey "\eOd"              backward-word                       # rxvt C-left
+bindkey "\e[\303"           forward-word                        # rxvt M-right
+bindkey "\eOc"              forward-word                        # rxvt C-right
+bindkey "\e[\301"           beginning-of-line                   # rxvt M-up
+bindkey "\e[\302"           end-of-line                         # rxvt M-down
+#bindkey '\e[3\376'         delete-word                         # rxvt M-delete
+
+
+

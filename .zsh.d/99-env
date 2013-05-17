@@ -1,0 +1,13 @@
+# automatically remove duplicates from these arrays
+typeset -gU path cdpath manpath fpath
+
+# Set prompt
+if [ "`id -u`" -eq 0 ]; then
+	export PROMPT='%{$bold_color$fg[red]%}%n%{$bold_color$fg[blue]%}@%m%{$bold_color$fg[grey]%}:%~%#%{$reset_color%}'
+else
+	export PROMPT='%{$bold_color$fg[green]%}%n%{$bold_color$fg[blue]%}@%m%{$bold_color$fg[grey]%}:%~$ %{$reset_color%}'
+fi
+
+export RPROMPT=$'%(0?::%{\e[1;32;33m%} %? %{\e[0m%} )%{\e[0;37m%}%T%{\e[0m%}'
+export SPROMPT=$'%bCorregir %{\e[31m%}%R%{\e[0m%} per %{\e[32m%}%r%{\e[0m%} ? [nyae]: '
+

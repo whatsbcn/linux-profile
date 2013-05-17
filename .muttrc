@@ -1,0 +1,27 @@
+set move=no
+set pgp_autosign=yes
+set pgp_replyencrypt=yes
+set mbox_type=Maildir
+set folder="~/Maildir/"
+set mask="!^\\.[^.]"
+set record="+.Sent"
+set postponed="+.Drafts"
+
+set beep                                        # beep on certain user errors and other errors
+set beep_new                            # beep on new mail
+set check_new                           # search for new messages in maildir/MH folders.
+set fast_reply                          # do not ask for to, subject,... when replying.
+
+mailboxes `\
+echo -n "+ "; \
+for file in ~/Maildir/.*; do \
+  box=$(basename "$file"); \
+    if [ ! "$box" = '.' -a ! "$box" = '..' -a ! "$box" = '.customflags' -a ! "$box" = '.subscriptions' ]; then \
+                      echo -n "+'$box' "; \
+        fi; \
+done`
+
+macro index c "<change-folder>?<toggle-mailboxes>" "open a different folder"
+macro pager c "<change-folder>?<toggle-mailboxes>" "open a different folder"
+macro index C "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox"
+macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"

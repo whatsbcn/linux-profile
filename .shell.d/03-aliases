@@ -1,0 +1,28 @@
+#
+# ALIASES
+
+if uname -a | grep -q Linux 
+then
+  alias man='LC_ALL=C LANG=C man'
+  alias ls='ls --color=auto -F'
+  alias ll='ls -lhF'
+  alias la='ls -aF'
+  alias cp='cp -i'
+  alias mv='mv -i'
+  alias l='ll -aF'
+  alias grep='grep --colour=auto'
+  alias zgrep='zgrep --colour=auto'
+  # Disable using temporary files on vim
+  #alias vim='vim -n -i NONE'
+fi
+
+if uname -a | grep -q -i bsd
+then
+  alias man='LC_ALL=C LANG=C man'
+  alias ls='ls -GC'
+  alias ll='ls -lh'
+  alias la='ls -a'
+  alias cp='cp -i'
+  alias mv='mv -i'
+  alias l='ll -aF'
+fi

@@ -1,0 +1,22 @@
+# MODULES
+
+autoload -U zargs
+autoload -U zmv
+autoload -U zed
+autoload -U zcalc
+autoload -U zftp
+
+# Advanced completion menu
+autoload -U compinit
+compinit
+
+autoload colors
+colors
+
+# Autoload zsh modules when they are referenced
+zmodload -a zsh/stat stat
+zmodload -a zsh/zpty zpty
+zmodload -a zsh/zprof zprof
+zmodload -ap zsh/mapfile mapfile
+
+
