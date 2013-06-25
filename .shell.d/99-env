@@ -42,7 +42,7 @@ export HISTSIZE=100000
 export HISTFILESIZE=$HISTSIZE
 export HISTCONTROL=ignoredups
 export SAVEHIST=$HISTSIZE
-export PATH="~/bin:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/games:/usr/X11R6/bin:/usr/local/sbin:/sbin:/usr/sbin"
+export PATH="~/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/games:/usr/X11R6/bin:/usr/local/sbin:/sbin:/usr/sbin"
 export MANPATH=~/bin/man:"${MANPATH}:/usr/local/man/:/usr/share/man"
 export MAIL="/home/$USER/Maildir"
 export GREP_COLOR=31
@@ -75,9 +75,9 @@ esac
 
 if [ x"$BASH" != "x" ]; then
   if [ "`id -u`" -eq 0 ]; then
-    export PS1='\[\033[01;31m\]\u\[\033[01;34m\]@\h\[\033[01;30m\]:\w#\[\033[00m\] '
+	export PS1='\[\033[01;31m\]\u\[\033[01;33m\]@\[\033[01;36m\]\h \[\033[01;33m\]\w \[\033[01;35m\]# \[\033[00m\] '
   else
-    export PS1='\[\033[01;32m\]\u\[\033[01;34m\]@\h\[\033[01;30m\]:\w\$\[\033[00m\] '
+	export PS1='\[\033[01;32m\]\u\[\033[01;33m\]@\[\033[01;36m\]\h \[\033[01;33m\]\w \[\033[01;35m\]\$ \[\033[00m\] '
   fi
 else
   if [ x"$(echo $SHELL | grep -o zsh)" != "x" ]; then
