@@ -16,7 +16,7 @@ then
   #alias vim='vim -n -i NONE'
 fi
 
-if uname -a | grep -q -i bsd
+if uname -a | grep -q -i 'bsd\|darwin'
 then
   alias man='LC_ALL=C LANG=C man'
   alias ls='ls -GC'
